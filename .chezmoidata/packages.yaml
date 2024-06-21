@@ -3,16 +3,10 @@ packages:
     taps:
     - '1password/tap'
     - 'homebrew/bundle'
-    - 'homebrew/cask'
-    - 'homebrew/cask-fonts'
-    - 'homebrew/cask-versions'
-    - 'homebrew/core'
     brews:
     - 'editorconfig'
     - 'fish'
-    - 'fish'
     - 'gh'
-    - 'git'
     - 'git'
     - 'jless'
     - 'jq'
@@ -21,8 +15,6 @@ packages:
     - 'ripgrep'
     - 'scc'
     - 'starship'
-    - 'tmux'
-    - 'tmuxinator'
     - 'tree'
     - 'vim'
     - 'wget'
@@ -38,8 +30,7 @@ packages:
     - 'obsidian'
     - 'spotify'
     - 'visual-studio-code'
-    - 'visual-studio-code-insiders'
-    - 'zoom'
+    - 'visual-studio-code@insiders'
   work:
     taps:
     - 'hashicorp/tap'
