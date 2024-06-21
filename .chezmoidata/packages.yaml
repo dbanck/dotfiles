@@ -26,6 +26,7 @@ packages:
     - 'font-hack-nerd-font'
     - 'imageoptim'
     - 'obsidian'
+    - 'rectangle-pro'
     - 'spotify'
     - 'visual-studio-code'
     - 'visual-studio-code@insiders'
@@ -39,4 +40,5 @@ packages:
     casks:
     - 'elgato-control-center'
     - 'elgato-stream-deck'
+    - 'displaylink'
     - 'obs'
