@@ -18,19 +18,18 @@ packages:
     - 'tree'
     - 'vim'
     - 'wget'
-    - 'zed@preview'
     - 'zellij'
     casks:
     - '1password-cli'
     - 'alacritty'
     - 'font-hack'
     - 'font-hack-nerd-font'
-    - 'google-chrome'
     - 'imageoptim'
     - 'obsidian'
     - 'spotify'
     - 'visual-studio-code'
     - 'visual-studio-code@insiders'
+    - 'zed@preview'
   work:
     taps:
     - 'hashicorp/tap'
