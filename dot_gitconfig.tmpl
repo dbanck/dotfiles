@@ -1,0 +1,104 @@
+[user]
+	name = {{ .git.name | quote }}
+	email = {{ .git.email | quote }}
+	signingkey = {{ .git.signingkey | quote }}
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = "/Applications/1Password.app/Contents/MacOS/op-ssh-sign"
+[commit]
+	gpgsign = true
+[core]
+	excludesfile = /Users/dbanck/.gitignore
+	autocrlf = input
+	editor = vim
+[color]
+	pager = true
+	ui = auto
+	status = auto
+	diff = auto
+	branch = auto
+	showBranch = auto
+	interactive = auto
+	grep = auto
+[color "status"]
+	header = black bold
+	branch = cyan
+	nobranch = red
+	unmerged = red
+	untracked = cyan
+	added = cyan
+	changed = red
+[color "diff"]
+	meta = red bold
+	frag = black bold
+	func = blue
+	old = red strike
+	new = cyan
+	commit = blue
+	whitespace = red
+	context = normal
+[color "branch"]
+	current = cyan
+	local = blue
+	remote = magenta
+	upstream = magenta
+	plain = normal
+[color "decorate"]
+	branch = blue
+	remoteBranch = magenta
+	tag = magenta
+	stash = cyan
+	HEAD = blue
+[color "interactive"]
+	prompt = red
+	header = red bold
+	error = red
+	help = black bold
+[color "grep"]
+	context = normal
+	match = cyan
+	filename = blue
+	function = blue
+	selected = normal
+	separator = red bold
+	linenumber = normal
+[alias]
+	ci = commit
+	co = checkout
+	br = branch
+	cp = cherry-pick
+	cps = cherry-pick -s
+	slog = log --pretty=oneline --abbrev-commit
+	glog = log --graph --decorate --pretty=oneline --abbrev-commit
+	gloga = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	unci = reset HEAD^
+	uncommit = reset HEAD^
+	ls = ls-files
+	out = log HEAD..origin
+	killbranches = !git branch | grep -v main | xargs git branch -D 2> /dev/null
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --
+	please = push --force-with-lease
+	commend = commit --amend --no-edit
+	stsh = stash --keep-index
+	staash = stash --include-untracked
+	staaash = stash --all
+	st = status --short --branch
+	rebase-last-twenty = "!b=\"$(git rev-parse --abbrev-ref HEAD)\" ; h=\"$(git rev-parse $b)\" ; echo \"Current branch: $b $h\" ; c=\"$(git rev-parse $b~19)\" ; echo \"Recreating $b branch with initial commit $c ...\" ; git checkout --orphan new-start $c ; git commit -C $c ; git rebase --onto new-start $c $b ; git branch -d new-start ; git gc"
+[push]
+	default=current
+[rebase]
+	autosquash = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = main
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate

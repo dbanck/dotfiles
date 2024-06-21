@@ -1,0 +1,7 @@
+[".config/alacritty/themes"]
+    type = "git-repo"
+    url = "https://github.com/alacritty/alacritty-theme.git"
+[".config/fish/themes/DraculaOfficial.theme"]
+    type = "file"
+    url = "https://raw.githubusercontent.com/dracula/fish/master/themes/Dracula%20Official.theme"
+    refreshPeriod = "168h"

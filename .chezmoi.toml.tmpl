@@ -1,0 +1,9 @@
+{{- $isWorkComputer := promptBoolOnce . "isWorkComputer" "Is this your work computer" -}}
+{{- $gitname := promptStringOnce . "git.name" "Git Name" -}}
+{{- $gitemail := promptStringOnce . "git.email" "Git Email Address" -}}
+
+[data]
+    isWorkComputer = {{ $isWorkComputer }}
+    git.name = {{ $gitname | quote }}
+    git.email = {{ $gitemail | quote }}
+    git.signingkey = "ADD ME"
