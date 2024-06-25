@@ -35,7 +35,9 @@ packages:
   work:
     taps:
     - 'hashicorp/tap'
+    - 'miniscruff/changie https://github.com/miniscruff/changie'
     brews:
+    - 'changie'
     - 'hashicorp/tap/copywrite'
     - 'hashicorp/tap/terraform'
     casks:

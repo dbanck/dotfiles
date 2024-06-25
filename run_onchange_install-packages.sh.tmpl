@@ -3,7 +3,7 @@
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range .packages.universal.taps -}}
-tap {{ . | quote }}
+tap {{ . | quote | replace " " "\", \"" }}
 {{ end -}}
 {{ range .packages.universal.brews -}}
 brew {{ . | quote }}
@@ -18,7 +18,7 @@ EOF
 
 brew bundle --no-lock --file=/dev/stdin <<EOF
 {{ range .packages.work.taps -}}
-tap {{ . | quote }}
+tap {{ . | quote | replace " " "\", \"" }}
 {{ end -}}
 {{ range .packages.work.brews -}}
 brew {{ . | quote }}
