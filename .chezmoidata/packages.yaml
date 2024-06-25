@@ -25,6 +25,7 @@ packages:
     - 'font-hack'
     - 'font-hack-nerd-font'
     - 'imageoptim'
+    - 'karabiner-elements'
     - 'obsidian'
     - 'rectangle-pro'
     - 'spotify'
@@ -41,4 +42,5 @@ packages:
     - 'elgato-control-center'
     - 'elgato-stream-deck'
     - 'displaylink'
+    - 'notion-calendar'
     - 'obs'
