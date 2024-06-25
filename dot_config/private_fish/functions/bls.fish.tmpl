@@ -1,0 +1,3 @@
+function bls
+  go build -v -ldflags="-X 'main.algoliaAppID={{ onepasswordRead "op://w7wlzdmkohkbakxwobcpavp3pa/zr7ddtn6xnbe7jk24r7d2qxleu/ALGOLIA_APP_ID" }}' -X 'main.algoliaAPIKey={{ onepasswordRead "op://w7wlzdmkohkbakxwobcpavp3pa/zr7ddtn6xnbe7jk24r7d2qxleu/ALGOLIA_API_KEY" }}'" $argv; 
+end
