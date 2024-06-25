@@ -1,0 +1,12 @@
+layout {
+  default_tab_template {
+    children
+    pane size=1 borderless=true {
+      plugin location="compact-bar"
+    }
+  }
+  cwd "~/Projects"
+  tab name="vscode-terraform" cwd="vscode-terraform" focus=true {}
+  tab name="syntax" cwd="syntax" {}
+  tab name="vscode-hcl" cwd="vscode-hcl" {}
+}
