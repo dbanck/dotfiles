@@ -1,0 +1,9 @@
+font-family = Hack Nerd Font
+font-size = 15
+
+theme = Dracula
+macos-titlebar-style = "hidden"
+
+shell-integration = fish
+
+confirm-close-surface = false
