@@ -23,6 +23,7 @@ packages:
     - 'alacritty'
     - 'font-hack'
     - 'font-hack-nerd-font'
+    - 'ghostty'
     - 'imageoptim'
     - 'karabiner-elements'
     - 'jordanbaird-ice'
