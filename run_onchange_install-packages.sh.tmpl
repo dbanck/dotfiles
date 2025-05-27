@@ -1,7 +1,7 @@
 {{ if eq .chezmoi.os "darwin" -}}
 #!/bin/bash
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.universal.taps -}}
 tap {{ . | quote | replace " " "\", \"" }}
 {{ end -}}
@@ -16,7 +16,7 @@ EOF
 
 {{ if .isWorkComputer -}}
 
-brew bundle --no-lock --file=/dev/stdin <<EOF
+brew bundle --file=/dev/stdin <<EOF
 {{ range .packages.work.taps -}}
 tap {{ . | quote | replace " " "\", \"" }}
 {{ end -}}
