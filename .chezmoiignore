@@ -1,1 +1,5 @@
 README.md
+{{ if not .isWorkComputer -}}
+.config/fish/functions/bls.fish
+.ssh/known_hosts
+{{- end }}
